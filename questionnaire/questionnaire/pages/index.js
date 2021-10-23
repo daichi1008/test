@@ -1,10 +1,18 @@
 import { useForm, Controller } from "react-hook-form";
 import Container from "@material-ui/core/Container";
 import Input from "@material-ui/core/Input"
-export default function Home() {
-  const { register, handleSubmit, watch, formState: { errors }, control } = useForm()
+import firebase from "./config/firebase"
 
-  const onSubmit = (data) => {
+export default function Home() {
+  const { register, handleSubmit, watch, formState: { errors }, control, } = useForm()
+
+  const onSubmit = () => {
+    firebase.firestore().collection("console")
+      .add({
+        content: defaultValue,
+
+      })
+
     console.log(data)
 
   }
