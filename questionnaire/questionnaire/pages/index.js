@@ -6,10 +6,10 @@ import firebase from "./config/firebase"
 export default function Home() {
   const { register, handleSubmit, watch, formState: { errors }, control, } = useForm()
 
-  const onSubmit = () => {
+  const onSubmit = (data) => {
     firebase.firestore().collection("console")
       .add({
-        content: defaultValue,
+        content: data,
 
       })
 
