@@ -10,7 +10,7 @@ export const getFoodPosition = (fileSize, excludes) => {
         }
     }
 }
-export const initFields = (fieldSize, snake) => {
+export const initFields = (fieldSize, snake,) => {
     const fields = []
     for (let i = 0; i < fieldSize; i++) {
         const cols = new Array(fieldSize).fill('')
